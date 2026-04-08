@@ -2,6 +2,6 @@
     "name": "PlotRNN",
     "description": "A creative AI that generates short stories.",
     "thematic": "Storytelling",
-    "image": "/AI-logo.png", 
+    "image": "https://cdn.cristoi.ro/plotrnn.png", 
     "model_file_name": "plotrnn.pth"
 }
