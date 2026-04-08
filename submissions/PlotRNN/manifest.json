@@ -1,0 +1,7 @@
+{
+    "name": "PlotRNN",
+    "description": "A creative AI that generates short stories.",
+    "thematic": "Storytelling",
+    "image": "/AI-logo.png", 
+    "model_file_name": "plotrnn.pth"
+}
