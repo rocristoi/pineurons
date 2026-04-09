@@ -3,5 +3,6 @@
     "description": "A creative AI that generates short stories.",
     "thematic": "Storytelling",
     "image": "https://cdn.cristoi.ro/plotrnn.png", 
-    "model_file_name": "plotrnn.pth"
+    "sequence_length": 50,
+    "repository": "https://github.com/rocristoi/pineurons-submission"
 }
