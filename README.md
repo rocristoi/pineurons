@@ -24,7 +24,7 @@ By the end of this project, you will understand:
 
 ## Project Steps
 
-To get the Raspberry Pi, you need to spend about **3+ hours** of active development on this project. You can always spend more time if you want to dive deeper!
+To get the Raspberry Pi, you need to spend about **6+ hours** of active development on this project. You can always spend more time if you want to dive deeper!
 
 ### 1. Dataset Engineering 
 You'll start by building a custom dataset. This decides your AI's "personality". You can choose themes like:
@@ -52,17 +52,19 @@ Your final AI must generate coherent text!
 * It must reflect your chosen theme.
 * It needs to maintain readability across 2–3 consecutive sentences.
 
+### 5. Interactive Running Code
+Besides having the model trained really well, it should be interactive in some way. You can build a CLI tool, a React app where you can interact with it graphically, or anything similar to bring your AI to life!
+
 
 ## How to Submit & Get Your Raspberry Pi!
 
 Once you have a working AI that meets the quality standards, it's time to submit!
 
-1. **Fork this repository** and create a new branch.
-2. Inside the `/submissions` folder, create a new folder with **your model's name** (e.g., `/submissions/MyAwesomeStoryAI/`).
-3. Inside your new folder, upload the following files:
+1. **Create a repository on your own GitHub account** and upload your whole project there. This must include your AI Model, Training Code (including dataset!), and Running Code (the app that makes the model interactive).
+2. **Fork this repository** (the PiNeurons repo) and create a new branch.
+3. Inside the `/submissions` folder, create a new folder. **The folder name must exactly match your model file's name** (without the `.pth` extension). For example, if your model is `MyAwesomeStoryAI.pth`, the folder should be `/submissions/MyAwesomeStoryAI/`.
+4. Inside your new folder, upload **only** these two files:
    * Your trained model file (`.pth` extension).
-   * The Python code (`.py`) you used to train the model.
-   * Your dataset, in a `.txt` file.
    * A `manifest.json` file configuring your submission.
 
 ### `manifest.json` Template
@@ -74,12 +76,13 @@ Make sure your JSON file looks exactly like this, filled with your details:
     "description": "A creative AI that generates short sci-fi stories.",
     "thematic": "Storytelling",
     "image": "https://link-to-your-image.com/image.png", 
-    "model_file_name": "model.pth"
+    "sequence_length": 64,
+    "repository": "https://github.com/your-username/your-awesome-repo"
 }
 ```
 *(Note: The `image` field is optional, but if provided it must be a URL to a 1024x1024px image representing your AI!)*
 
-4. **Create a Pull Request (PR)** to this repository.
-5. We will evaluate your submission based on functionality and output quality. If accepted, we will ship your **Raspberry Pi Zero 2 W**! 🚢📦
+5. **Create a Pull Request (PR)** to this repository.
+6. We will evaluate your submission based on functionality and output quality. If accepted, we will ship your **Raspberry Pi Zero 2 W**! 🚢📦
 
 Happy building, and we can't wait to see what you create!
