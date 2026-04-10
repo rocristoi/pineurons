@@ -606,7 +606,7 @@ export function ChatContainer({ data }: { data: ContentData }) {
                 );
 
                 try {
-                  const res = await fetch("http://localhost:8000/generate", {
+                  const res = await fetch("https://pineurons-api.koders.ro/generate", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
