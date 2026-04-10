@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pineurons Web Interface
+
+Modern, high-performance conversational frontend built with Next.js. This application is designed to deliver a fast and responsive user experience for interacting with generative systems.
+
+## Architecture and Efficiency
+
+This app is optimized for speed and fluidity. It leverages Next.js to provide streamlined rendering and state management. Key performance benefits include:
+
+*   **Modular Design:** The interface relies on isolated components and stateful logic (`ChatContainer`, `MessageBubble`, `PromptChips`) to restrict re-renders to only the elements undergoing change.
+
+## Backend Role
+
+The web application interfaces with a dedicated Python backend service. This backend exists solely to host and execute specialized machine learning model inference. 
+
+By structuring the architecture this way, heavy model inferences and computational workloads are entirely isolated from the Node.js environment. This prevents the primary web server loop from being choked by data-processing computations. This ensures the frontend remains completely responsive during complex generative operations and allows the web and computation layers to be scaled and managed independently.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+*   Node.js
+
+### Installation
+
+Install the necessary dependencies from the root directory:
+
+```bash
+npm install
+```
+
+### Development
+
+Run the Next.js development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Navigate to `http://localhost:3000` to interact with the frontend.

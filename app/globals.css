@@ -1,26 +1,107 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #e5e5e5;
+  --term-accent: #c21c4a;
+  --term-glow: rgba(34, 197, 94, 0.4);
+  --term-dim: #525252;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-term-accent: var(--term-accent);
+  --color-term-glow: var(--term-glow);
+  --color-term-dim: var(--term-dim);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.animate-fade-slide {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out both;
+}
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.glow-button {
+  box-shadow: 0 0 10px var(--term-glow);
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover,
+.glow-button:focus-visible {
+  box-shadow: 0 0 20px var(--term-accent);
+  text-shadow: 0 0 8px var(--term-glow);
+  outline: none;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px var(--term-glow);
+}
+
+.streaming-cursor > *:last-child::after,
+.streaming-cursor:empty::after {
+  content: "▋";
+  animation: var(--animate-blink);
+  color: var(--term-accent);
+  margin-left: 2px;
 }
