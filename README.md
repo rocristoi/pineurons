@@ -2,7 +2,7 @@
 
 Welcome to **PiNeurons**! Ever wanted to build your own personal AI to showcase to your friends? Now is your chance! 
 
-Design a custom AI model from scratch, and we'll send you a **Raspberry Pi Zero 2 W** to run it on! In this project, you'll learn how to build your very own character-level Recurrent Neural Network (RNN) that generates text based on a "personality" you give it.
+Design a custom AI model from scratch, and we'll reward you with a **$15 OpenAI credits grant** or ship you a **Raspberry Pi Zero 2 W** to run it on! In this project, you'll learn how to build your very own character-level Recurrent Neural Network (RNN) that generates text based on a "personality" you give it.
 
 
 ## What is PiNeurons?
@@ -24,7 +24,11 @@ By the end of this project, you will understand:
 
 ## Project Steps
 
-To get the Raspberry Pi, you need to spend about **6+ hours** of active development on this project. You can always spend more time if you want to dive deeper!
+We have two reward tiers based on the time you invest in active development on this project:
+* **3+ hours:** Build and train your core AI model to get a **$15 OpenAI credits grant**!
+* **6+ hours:** Go the extra mile by building an interactive app for your AI to get a **Raspberry Pi Zero 2 W**!
+
+You can always spend more time if you want to dive deeper!
 
 ### 1. Dataset Engineering 
 You'll start by building a custom dataset. This decides your AI's "personality". You can choose themes like:
@@ -56,7 +60,7 @@ Your final AI must generate coherent text!
 Besides having the model trained really well, it should be interactive in some way. You can build a CLI tool, a React app where you can interact with it graphically, or anything similar to bring your AI to life!
 
 
-## How to Submit & Get Your Raspberry Pi!
+## How to Submit & Get Your Rewards!
 
 Once you have a working AI that meets the quality standards, it's time to submit!
 
@@ -76,13 +80,13 @@ Make sure your JSON file looks exactly like this, filled with your details:
     "description": "A creative AI that generates short sci-fi stories.",
     "thematic": "Storytelling",
     "image": "https://link-to-your-image.com/image.png", 
-    "sequence_length": 64,
+    "sequence_length": 50,
     "repository": "https://github.com/your-username/your-awesome-repo"
 }
 ```
 *(Note: The `image` field is optional, but if provided it must be a URL to a 1024x1024px image representing your AI!)*
 
 5. **Create a Pull Request (PR)** to this repository.
-6. We will evaluate your submission based on functionality and output quality. If accepted, we will ship your **Raspberry Pi Zero 2 W**! 🚢📦
+6. We will evaluate your submission based on functionality and output quality. If accepted, we will send your **$15 OpenAI credits grant** or ship your **Raspberry Pi Zero 2 W**! 🚢📦
 
 Happy building, and we can't wait to see what you create!
